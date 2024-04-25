@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Deliciosas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Receitas deliciosas</title>
+ 
+     <!-- Link da Fonte MontSerrat-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    
+
+    
+ 
+ </head>
+
+<style>.btn {
+    background-color: #f74848;
+  }</style>
+ 
+ 
+ <body>
+     <nav class="menu">
+       
+        <img src="">
+         <ul>
+             <li><a href="index.html"> Inicio </a></li>
+             <li><a href="2pagina.html"> Receitas </a></li>
+             <li><a href="3pagina.html"> cadastrar receitas </a></li>
+             <li><a href="4pagina.html"> perfil </a></li>
+         </ul>
+         
+               
+
+     </nav>
+
+     <br><br>
+
+     <p style="text-align: left; font-size: 2em; font-family: 'calibri' ">  Adicionar receita </p>
+
+        <form id="form-receita">
+            <div class="form-group">
+                <label for="nome-receita">Nome da Receita:</label>
+                <input type="text" class="form-control" id="nome-receita" placeholder="Digite o nome da receita" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredientes">Ingredientes (separados por vírgula):</label>
+                <textarea class="form-control" id="ingredientes" placeholder="Digite os ingredientes"></textarea>
+            </div>
+            <button type="button" class="btn" onclick="adicionarReceita()">Adicionar Receita</button>
+        </form>
+    
+        <h2 class="mt-5">Lista de Receitas</h2>
+        <div id="lista-receitas"></div>
+    </div>
+    
+    <script>
+        let receitas = [];
+    
+        function adicionarReceita() {
+            let nomeReceita = document.getElementById('nome-receita').value;
+            let ingredientes = document.getElementById('ingredientes').value.split(',');
+    
+            if (nomeReceita.trim() !== '' && ingredientes.length > 0) {
+                receitas.push({
+                    nome: nomeReceita.trim(),
+                    ingredientes: ingredientes.map(ingrediente => ingrediente.trim())
+                });
+    
+                exibirReceitas();
+                limparCampos();
+            } else {
+                alert('Por favor, preencha o nome da receita e a lista de ingredientes.');
+            }
+        }
+    
+        function exibirReceitas() {
+            let lista = '<ul class="list-group">';
+            receitas.forEach(receita => {
+                lista += `<li class="list-group-item">${receita.nome}: ${receita.ingredientes.join(', ')}</li>`;
+            });
+            lista += '</ul>';
+    
+            document.getElementById('lista-receitas').innerHTML = lista;
+        }
+    
+        function limparCampos() {
+            document.getElementById('nome-receita').value = '';
+            document.getElementById('ingredientes').value = '';
+        }
+    </script>
+    
+    </body>
+    </html>
+    
+ 
+
+
+   
+  

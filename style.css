@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(146, 15, 15, 0.1);
+}
+h1, h2, h3 {
+    color: #000000;
+    text-align: center;
+}
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #a1a1a1;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+.menu {
+         width: 100%;
+         /* width = Largura */
+         height: 80px;
+         /* height = altura */
+         background-color: #ec4b4b;
+         /* Background-Color - Cor de Fundo */
+         display: flex;
+         /* Flex - Para alinhar os elementos filhos*/
+
+     }
+    
+     .menu .logo {
+         flex: 1;
+         /* Ocupará o espaço de 1 parte */
+         background-image: url('');
+         /* Background-Image - Imagem de Fundo */
+         background-repeat: no-repeat;
+         /* Repetição de Background */
+         background-position: center center;
+         /* Posição do Background */
+     }
+
+     .menu ul {
+         text-align: center;
+         /* Alinhamento centralizado */
+         flex: 4;
+         /* Ocupará o espaço de 4 partes */
+         margin-top: 30px;
+         /* Espaço Externo ao Elemento */
+         align-items: center;
+     }
+
+     .menu ul li {
+         display: inline;
+         /* inline - Alinhar em linha */
+         margin-left: 15px;
+     }
+
+     .menu ul li a {
+         text-decoration: none;
+         /* Remoção do underline */
+         color: #fff;
+         /* color - cor do texto */
+         font-family: 'Montserrat', sans-serif;
+         /* font-family - família da fonte*/
+         padding: 20px;
+         /* background-color: #ff9100; */
+
+     }
+
+     .menu ul li a:hover {
+         /* border-bottom: 3px solid #ff9100; */
+         background-color: rgb(255, 113, 113);
+     }
+
+
+     .banner {
+         width: 100%;
+         height: 500px;
+         background-image: url('https://th.bing.com/th/id/R.2b6ed2e3ebc9d8a18e5e1c2bb7a5fa89?rik=l4qNoztp8QcTiA&pid=ImgRaw&r=0');
+         background-size: cover;
+         background-position: center;
+         padding: 0,5%;
+
+     }
+
+     .banner .text {
+         height: 500px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .banner .text h2 {
+         color: #000000;
+         margin-top: 0;
+         font-family: 'Kaushan Script', cursive;
+         font-weight: 100;
+     }
+ 
